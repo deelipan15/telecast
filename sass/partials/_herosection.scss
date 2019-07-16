@@ -1,0 +1,143 @@
+.hero-container {
+  h1 {
+    letter-spacing: -0.8px;
+    color: $black;
+  }
+  p {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: -0.8px;
+    color: $dimgrey;
+    @include mq("mobile") {
+      font-size: 19px;
+      letter-spacing: -0.6px;
+    }
+  }
+  article {
+    position: relative;
+    z-index: 1;
+    max-width: 989px;
+    margin: 0 auto;
+    @include transform(translateY(101px));
+    & > div {
+      margin-top: 46px;
+      padding: 45px 43px 39px 44px;
+      background-color: $white;
+      border: 1px solid $whitesmoke;
+      @include border-radius(6px);
+      @include box-shadow(0 12px 27px 0 rgba($black, 0.04));
+      h5 {
+        letter-spacing: -0.5px;
+        color: $black;
+      }
+      .input-group {
+        font-size: 0;
+        margin: 15px 0 20px;
+        border: 1px solid $solitudeblue;
+        @include border-radius(6px);
+        label {
+          font-size: 16px;
+          font-weight: 500;
+          display: inline-block;
+          vertical-align: middle;
+          width: 205px;
+          height: 52px;
+          padding: 18px 17px;
+          letter-spacing: -0.3px;
+          color: $waikawagrey;
+          background-color: $solitude;
+          border-right: 1px solid $solitudeblue;
+        }
+        input {
+          font-size: 16px;
+          font-weight: 500;
+          display: inline-block;
+          vertical-align: middle;
+          width: calc(100% - 428px);
+          height: 52px;
+          padding: 18px;
+          letter-spacing: -0.3px;
+          color: $black;
+          border: 0;
+        }
+        button {
+          display: inline-block;
+          vertical-align: middle;
+          padding: 9px 16px 10px 56px;
+          letter-spacing: -0.5px;
+          background-image: url("../images/airplay-icon.svg");
+          background-position: center left 17px;
+          background-repeat: no-repeat;
+          background-size: 21px auto;
+        }
+      }
+      & > a {
+        font-size: 13px;
+        font-weight: 500;
+        display: inline-block;
+        vertical-align: top;
+        padding-left: 34px;
+        letter-spacing: -0.3px;
+        color: $cornflowerblue;
+        background-image: url("../images/link-icon.svg");
+        background-position: center left;
+        background-repeat: no-repeat;
+        background-size: 23px auto;
+        cursor: pointer;
+      }
+    }
+    @include mq("mobile") {
+      text-align: center;
+      padding: 0 15px;
+      @include transform(translateY(65px));
+      & > div {
+        padding: 34px 20px;
+        h5 {
+          font-size: 17px;
+          line-height: 1.47;
+          letter-spacing: -0.4px;
+        }
+        .input-group {
+          position: relative;
+          margin: 23px 0 32px;
+          padding: 4px;
+          label {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            padding: 0;
+            pointer-events: none;
+            opacity: 0;
+            z-index: -10;
+          }
+          input {
+            font-size: 15px;
+            width: calc(100% - 46px);
+            height: auto;
+            padding: 13px 14px;
+          }
+          button {
+            font-size: 0;
+            width: 46px;
+            height: 45px;
+            padding: 0;
+            background-position: center;
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+  .hero-banner {
+    height: 422px;
+    @include background-image-retina-cover("../images/header-image", png);
+    background-repeat: no-repeat;
+    background-position: center;
+    @include mq("mobile") {
+      height: 275px;
+      margin-top: -77px;
+    }
+  }
+}

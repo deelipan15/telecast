@@ -1,0 +1,214 @@
+footer {
+  padding: 36px 68px;
+  .footer {
+    &-brand {
+      float: left;
+      .teleport-logo {
+        display: inline-block;
+        width: 136px;
+        height: 38px;
+      }
+      div {
+        margin-top: 167px;
+        h6 {
+          margin-bottom: 8px;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 1.79;
+          letter-spacing: -0.4px;
+          color: $suvagrey;
+        }
+        .aw-logo {
+          display: inline-block;
+          width: 140px;
+          height: 18px;
+          background-position: center left;
+        }
+      }
+      @include mq("mobile") {
+        float: none;
+        div {
+          margin-top: 656px;
+        }
+      }
+    }
+    &-nav {
+      float: right;
+      a {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 2.14;
+        letter-spacing: -0.4px;
+        color: $matterhorn;
+        cursor: pointer;
+        @include transition(color 0.2s linear);
+        &:hover {
+          color: $cornflowerblue;
+        }
+      }
+      @include mq("mobile") {
+        position: absolute;
+        top: 75px;
+        float: none;
+        width: 100%;
+        a {
+          line-height: 3.21;
+        }
+      }
+    }
+    &-tree {
+      float: right;
+      width: 164px;
+      margin-left: 168px;
+      font-size: 0;
+      .onetreeoneplanet-logo {
+        display: inline-block;
+        width: 112px;
+        height: 96px;
+        background-image: url("../images/1-t-1-p-logo.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      img {
+        width: 112px;
+        height: 96px;
+        object-fit: contain;
+      }
+      p {
+        margin: 33px auto 21px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: -0.4px;
+        color: $suvagrey;
+      }
+      button {
+        padding: 8px 16px 5px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.67;
+        letter-spacing: -0.4px;
+        text-align: center;
+        color: $matterhorn;
+        background-color: transparent;
+        border: 1px solid $gainsboro;
+        @include border-radius(4px);
+        cursor: pointer;
+        @include transition(color 0.2s linear, border-color 0.2s linear);
+        &:hover {
+          color: $cornflowerblue;
+          border-color: $cornflowerblue;
+        }
+      }
+      @include mq("mobile") {
+        position: absolute;
+        top: 351px;
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        p {
+          max-width: 164px;
+        }
+      }
+    }
+    &-bottom {
+      margin-top: 18px;
+      padding-top: 24px;
+      border-top: 2px solid $solitude;
+      ul {
+        font-size: 0;
+        float: left;
+        li {
+          display: inline-block;
+          vertical-align: top;
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 1.92;
+          letter-spacing: -0.3px;
+          color: $matterhorn;
+          &::after {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px;
+            margin-right: 10px;
+            border: 1px solid $nobel;
+          }
+          &:last-of-type {
+            &::after {
+              display: none;
+            }
+          }
+          sub {
+            vertical-align: sub;
+          }
+          a {
+            color: $matterhorn;
+            @include transition(color 0.2s linear);
+            &:hover {
+              color: $cornflowerblue;
+            }
+          }
+        }
+      }
+      div {
+        font-size: 0;
+        float: right;
+        h6 {
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 1.92;
+          letter-spacing: -0.3px;
+          color: $nobel;
+          span {
+            color: $matterhorn;
+          }
+        }
+        i {
+          display: inline-block;
+          vertical-align: middle;
+          width: 12px;
+          height: 12px;
+          margin-left: 12px;
+          background-color: $cornflowerblue;
+          @include border-radius(50%);
+          @include transform(translateY(-1px));
+        }
+      }
+      @include mq("mobile") {
+        margin-top: 40px;
+        padding-top: 40px;
+        ul {
+          float: none;
+          li {
+            display: block;
+            &:after {
+              display: block;
+              width: 2px;
+              height: 2px;
+              margin: 12px auto;
+              background-color: $nobel;
+              border: 0;
+              @include border-radius(50%);
+            }
+          }
+        }
+        div {
+          float: none;
+          margin-top: 62px;
+        }
+      }
+    }
+  }
+  @include mq("mobile") {
+    padding: 36px 0;
+    text-align: center;
+    .container-wrapper {
+      max-width: 290px;
+      position: relative;
+    }
+  }
+}

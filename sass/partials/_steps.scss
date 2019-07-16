@@ -1,0 +1,80 @@
+.steps-container {
+  text-align: center;
+  margin: 133px 0 130px;
+  h6 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: $cornflowerblue;
+  }
+  h3 {
+    margin: 6px 0 16px;
+    color: $bunker;
+  }
+  p {
+    letter-spacing: -0.4px;
+    line-height: 1.56;
+    color: $matterhorn;
+  }
+  ul {
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+    margin-top: 85px;
+    font-size: 0;
+    li {
+      width: 261px;
+      padding-top: 166px;
+      text-align: center;
+      background-repeat: no-repeat;
+      background-position: top center;
+      h5 {
+        font-size: 17px;
+        color: $bunker;
+      }
+      &:first-of-type {
+        @include background-image-retina("../images/stepone", png, auto, 155px);
+      }
+      &:nth-of-type(2) {
+        @include background-image-retina("../images/steptwo", png, auto, 155px);
+      }
+      &:nth-of-type(3) {
+        @include background-image-retina(
+          "../images/stepthree",
+          png,
+          auto,
+          155px
+        );
+      }
+      &:last-of-type {
+        @include background-image-retina(
+          "../images/stepfour",
+          png,
+          auto,
+          155px
+        );
+      }
+    }
+  }
+  @include mq("mobile") {
+    margin: 68px 0 114px;
+    h6 {
+      width: 176px;
+      margin: auto;
+    }
+    h3 {
+      margin: 25px 0;
+    }
+    ul {
+      margin-top: 36px;
+      li {
+        padding-top: 146px;
+        margin-bottom: 58px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

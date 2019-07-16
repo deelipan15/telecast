@@ -1,0 +1,168 @@
+.sharing {
+  &-container {
+    article {
+      @include transform(translateY(-84px));
+      @include mq("mobile") {
+        max-width: 289px;
+        @include transform(translateY(-96px));
+      }
+    }
+  }
+  &-banner {
+    height: 528px;
+    @include background-image-retina-cover("../images/problem-shared", jpg);
+    background-repeat: no-repeat;
+    @include mq("mobile") {
+      height: 452px;
+      background-position: center;
+    }
+  }
+  &-problem-container {
+    text-align: center;
+    padding: 98px 30px;
+    margin-bottom: 67px;
+    background-color: $white;
+    h3 {
+      margin-bottom: 38px;
+      letter-spacing: -0.7px;
+      color: $bunker;
+    }
+    p {
+      max-width: 630px;
+      margin: auto;
+      line-height: 1.56;
+      letter-spacing: -0.4px;
+      color: $matterhorn;
+    }
+    @include mq("mobile") {
+      padding: 58px 15px;
+      margin-bottom: 118px;
+      h3 {
+        padding: 0 23px;
+      }
+    }
+  }
+  &-screen-container {
+    position: relative;
+    text-align: center;
+    padding: 80px 30px;
+    margin-bottom: 80px;
+    background-color: $whitesmoke;
+    @include background-image-retina(
+      "../images/get-sharescreen",
+      png,
+      auto,
+      100%
+    );
+    background-repeat: no-repeat;
+    background-position: center;
+    h2 {
+      margin-bottom: 38px;
+      letter-spacing: -1px;
+      color: $black;
+    }
+    button {
+      @include border-radius(6px);
+    }
+    span {
+      position: absolute;
+      top: -64px;
+      left: 0;
+      right: 0;
+      display: block;
+      width: 128px;
+      height: 128px;
+      margin: auto;
+      background-image: url("../images/airplay-2-icon.svg");
+      background-size: 194px 194px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    @include mq("mobile") {
+      margin-bottom: 58px;
+    }
+  }
+  &-back-container {
+    padding: 60px 90px;
+    background-color: $white;
+    @include box-shadow(0 2px 7px 0 rgba($black, 0.04));
+    .sharing-back {
+      &-content {
+        float: left;
+        max-width: 298px;
+        margin-top: 64px;
+        h2 {
+          margin-bottom: 28px;
+          letter-spacing: -1px;
+          color: $bunker;
+        }
+        p {
+          line-height: 1.56;
+          letter-spacing: -0.4px;
+          color: $matterhorn;
+        }
+      }
+      &-book {
+        float: left;
+        max-width: calc(100% - 298px);
+        padding-left: 60px;
+        font-size: 0;
+        img {
+          vertical-align: top;
+          width: 360px;
+          height: auto;
+          object-fit: contain;
+        }
+        div {
+          display: inline-block;
+          vertical-align: top;
+          width: calc(100% - 360px);
+          margin-top: 64px;
+          h5 {
+            font-weight: 700;
+            line-height: 1.44;
+            letter-spacing: -0.3px;
+            color: $bunker;
+          }
+          h6 {
+            margin-bottom: 19px;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.44;
+            letter-spacing: -0.3px;
+            color: $bunker;
+          }
+          p {
+            line-height: 1.56;
+            letter-spacing: -0.4px;
+            color: $matterhorn;
+          }
+        }
+      }
+    }
+    @include mq("mobile") {
+      padding: 55px 20px;
+      text-align: center;
+      .sharing-back {
+        &-content {
+          max-width: 100%;
+          margin-top: 0;
+        }
+        &-book {
+          max-width: 100%;
+          padding-left: 0;
+          img {
+            display: block;
+            height: 370px;
+            width: auto;
+          }
+          div {
+            display: block;
+            width: 100%;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}

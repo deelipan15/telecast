@@ -1,0 +1,31 @@
+h1 {
+  font-size: 38px;
+  font-weight: 700;
+  @include mq("mobile") {
+    font-size: 34px;
+  }
+}
+h2 {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 500;
+}

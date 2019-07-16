@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="198" viewBox="0 0 200 198">
+    <defs>
+        <circle id="b" cx="64" cy="64" r="41"/>
+        <filter id="a" width="245.1%" height="245.1%" x="-72.6%" y="-62.8%" filterUnits="objectBoundingBox">
+            <feOffset dy="8" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="18.5"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.101070804 0"/>
+        </filter>
+        <circle id="d" cx="64" cy="64" r="64"/>
+        <filter id="c" width="188.3%" height="188.3%" x="-44.1%" y="-42.6%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1" result="shadowInner"/>
+            <feOffset dy="2" in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="18.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(36 33.064)">
+            <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+            <circle cx="64" cy="64" r="40.5" fill="#FFF" stroke="#FFF" stroke-linejoin="square"/>
+        </g>
+        <g transform="translate(36 33.064)">
+            <use fill="#000" filter="url(#c)" xlink:href="#d"/>
+            <circle cx="64" cy="64" r="63.5" stroke="#C9C9C9" stroke-linejoin="square"/>
+        </g>
+        <g stroke="#4492FE" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+            <path d="M89.012 105.101h-1.5c-.795 0-1.558-.299-2.12-.832a2.768 2.768 0 0 1-.88-2.01V88.05c0-.754.317-1.477.88-2.01a3.087 3.087 0 0 1 2.12-.832h24c.796 0 1.56.3 2.122.832.562.533.878 1.256.878 2.01v14.21c0 .754-.316 1.477-.878 2.01a3.087 3.087 0 0 1-2.122.832h-1.5"/>
+            <path d="M99.512 102.26l7.5 8.526h-15z"/>
+        </g>
+    </g>
+</svg>

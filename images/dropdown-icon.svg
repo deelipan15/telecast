@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="7px" viewBox="0 0 11 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>dropdown-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="rough" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-1177.000000, -209.000000)" fill="#6285FF" fill-rule="nonzero">
+            <path d="M1178.02929,209.50002 L1186.59568,209.50002 C1186.88344,209.50002 1187.08266,209.638366 1187.19334,209.915058 C1187.30401,210.19175 1187.25974,210.429706 1187.06052,210.628924 L1182.77733,214.912117 C1182.64452,215.044929 1182.48957,215.111335 1182.31249,215.111335 C1182.1354,215.111335 1181.98046,215.044929 1181.84764,214.912117 L1177.56445,210.628924 C1177.36523,210.429706 1177.32096,210.19175 1177.43164,209.915058 C1177.54232,209.638366 1177.74153,209.50002 1178.02929,209.50002 Z" id="dropdown-icon"></path>
+        </g>
+    </g>
+</svg>

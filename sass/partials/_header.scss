@@ -1,0 +1,242 @@
+header {
+  font-size: 0;
+  padding: 33px 41px;
+  @include transition(transform 0.2s linear);
+  @include mq("mobile") {
+    padding: 12px 15px 10px;
+    &.open {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100vw;
+      height: 100vh;
+      background-color: $white;
+      @include transform(translateY(0));
+      @include transition(none);
+      .btn-menu {
+        padding-right: 23px;
+        background-image: url("../images/close-icon.svg");
+        background-size: 14px 13px;
+        &:before {
+          content: "CLOSE";
+        }
+      }
+      nav {
+        display: block;
+        a {
+          display: block;
+          margin-bottom: 10px;
+          margin-right: 0;
+        }
+        &.header-menu {
+          float: none;
+          margin: 46px auto 0;
+          text-align: center;
+          a {
+            &.new-tag {
+              &:before {
+                position: static;
+                display: inline-block;
+                vertical-align: middle;
+                padding: 2px 4px;
+                margin-right: 5px;
+                @include transform(translateY(-2px));
+              }
+            }
+          }
+        }
+        &.header-actions {
+          float: none;
+          @include width-max-content();
+          margin: auto;
+          text-align: center;
+          .username {
+            margin-top: 0;
+            &:after {
+              display: none;
+            }
+          }
+          ul {
+            display: block;
+            right: 50%;
+            margin: auto;
+            padding: 0;
+            border: 0;
+            @include transform(translateX(50%));
+            li {
+              font-size: 16px;
+            }
+            &:before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .teleport-logo {
+    float: left;
+    width: 136px;
+    height: 38px;
+    margin-top: 4px;
+    @include mq("mobile") {
+      width: 95px;
+      height: 26px;
+      margin-top: 0;
+    }
+  }
+  nav {
+    font-size: 0;
+    @include mq("mobile") {
+      display: none;
+    }
+    a {
+      font-size: 17px;
+      font-weight: 500;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 30px;
+      @include transition(color 0.2s linear);
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+    &.header-menu {
+      float: left;
+      margin-top: 14px;
+      margin-left: 122px;
+      a {
+        color: $midblack;
+        &.new-tag {
+          position: relative;
+          &:before {
+            content: "NEW";
+            font-size: 8px;
+            font-weight: 700;
+            display: block;
+            position: absolute;
+            bottom: calc(100% + 3px);
+            left: 0;
+            padding: 2px 3px 1px 4px;
+            color: $white;
+            background-color: $cornflowerblue;
+            @include border-radius(6px);
+            pointer-events: none;
+          }
+        }
+        &:hover {
+          color: $cornflowerblue;
+        }
+      }
+    }
+    &.header-actions {
+      float: right;
+      position: relative;
+      a {
+        color: $nero;
+        &:hover {
+          color: $cornflowerblue;
+        }
+        &.btn-light {
+          @include transition(color 0.2s linear, border-color 0.2s linear);
+          &:hover {
+            border-color: $cornflowerblue;
+          }
+        }
+      }
+      .username {
+        font-size: 17px;
+        font-weight: 500;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 14px;
+        color: $midblack;
+        cursor: pointer;
+        &::after {
+          content: "";
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: 5px;
+          width: 12px;
+          height: 12px;
+          background-image: url("../images/dropdown-icon.svg");
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        a {
+          &::selection {
+            pointer-events: none;
+          }
+        }
+        &:hover {
+          color: $cornflowerblue;
+        }
+      }
+      ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: -10px;
+        padding: 5px 0;
+        margin-top: 14px;
+        background-color: $white;
+        border: 1px solid $silver;
+        @include border-radius(5px);
+        li {
+          font-size: 14px;
+          font-weight: 500;
+          padding: 5px 15px;
+          color: $midblack;
+          @include transition(background-color 0.2s linear);
+          cursor: pointer;
+          &:hover {
+            background-color: $solitude;
+          }
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: calc(100% - 4px);
+          right: 10px;
+          width: 8px;
+          height: 8px;
+          background-color: $white;
+          border: 1px solid $silver;
+          border-right: 0;
+          border-bottom: 0;
+          @include transform(rotate(45deg));
+        }
+      }
+    }
+  }
+  .btn-menu {
+    float: right;
+    display: none;
+    margin-top: 1px;
+    @include transition(color 0.2s linear);
+    cursor: pointer;
+    &:before {
+      content: "MENU";
+    }
+    @include mq("mobile") {
+      display: block;
+    }
+  }
+  &.sticky {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -108px;
+    padding: 18px 41px;
+    z-index: 10;
+    background-color: $white;
+    @include box-shadow(0 2px 18px 0 rgba($charcoalgrey, 0.5));
+    @include transform(translateY(108px));
+    transform: translateY(108px);
+    @include mq("mobile") {
+      padding: 12px 15px 10px;
+    }
+  }
+}

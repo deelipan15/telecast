@@ -1,0 +1,43 @@
+//clearing the float
+.clear:before,
+.clear:after {
+  content: " ";
+  display: table;
+}
+
+.clear:after {
+  clear: both;
+}
+
+.clear * {
+  zoom: 1;
+}
+
+// blue dot
+.bluedot {
+  color: $cornflowerblue;
+}
+
+// wrapper
+.container-wrapper {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  @include mq("mobile") {
+    max-width: 261px;
+  }
+}
+
+// logos
+.teleport-logo {
+  background-image: url("../images/teleport-logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.aw-logo {
+  background-image: url("../images/anywhere-works-logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}

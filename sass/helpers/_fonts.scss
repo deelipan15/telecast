@@ -1,0 +1,34 @@
+// font family
+//metropolis
+@font-face {
+  font-family: "metropolis";
+  src: url("../fonts/Metropolis/Metropolis-Light.woff2") format("woff2"),
+    url("../fonts/Metropolis/Metropolis-Light.woff") format("woff"),
+    url("../fonts/Metropolis/Metropolis-Light.otf") format("otf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "metropolis";
+  src: url("../fonts/Metropolis/Metropolis-Regular.woff2") format("woff2"),
+    url("../fonts/Metropolis/Metropolis-Regular.woff") format("woff"),
+    url("../fonts/Metropolis/Metropolis-Regular.otf") format("otf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "metropolis";
+  src: url("../fonts/Metropolis/Metropolis-SemiBold.woff2") format("woff2"),
+    url("../fonts/Metropolis/Metropolis-SemiBold.woff") format("woff"),
+    url("../fonts/Metropolis/Metropolis-SemiBold.otf") format("otf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "metropolis";
+  src: url("../fonts/Metropolis/Metropolis-Bold.woff2") format("woff2"),
+    url("../fonts/Metropolis/Metropolis-Bold.woff") format("woff"),
+    url("../fonts/Metropolis/Metropolis-Bold.otf") format("otf");
+  font-weight: 700;
+  font-style: normal;
+}
